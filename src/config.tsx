@@ -7,7 +7,7 @@ export const price = 1;
 export const tokenNonce = '01';
 export const amountToBuy = 1;
 
-export const dAppName = 'example Dapp';
+export const dAppName = 'Bani Gratis mint room';
 
 // Generate your own WalletConnect 2 ProjectId here: https://cloud.walletconnect.com/app
 export const walletConnectV2ProjectId = '9b1a9564f91cb659ffe21b73d5c4e2d8';

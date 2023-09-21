@@ -18,7 +18,7 @@ Override Bootstrap variables only above.
 // Bootstrap
 
 @import '~bootstrap/scss/bootstrap.scss';
-
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
 @import '~bootstrap/scss/reboot';
 
 .custom-classname.btn-primary {
@@ -33,6 +33,14 @@ html {
 
 .wrapper {
   min-height: 100vh;
+  background-image: url(../img/3.jpg);
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .opacity-6 {
@@ -58,39 +66,72 @@ html {
 
 /* Navbar
 -------------------------------------------------- */
-.multiversx-logo {
-  width: 85px;
-  height: 25px;
+.bg-white{
+  background-color: #000 ;
+
 }
 
-.dapp-name {
-  line-height: 1;
-  border-left: 1px solid $gray-400;
-  padding-left: 3px;
-  margin-left: 4px;
+.multiversx-logo {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 80px;
+  height: 50px; 
+  background-image: url('../img/logo.png');
+}
+
+
+
+.joinButton {
+  background-color: #f77f00;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none; /* You may need to add this to override browser default styles for button */
 }
 
 /* Dashboard
 -------------------------------------------------- */
-.action-btn {
+
+.mainContent {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: $white;
-  margin: 0 7px;
-
-  button {
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    background-color: $white;
-
-    &:hover {
-      opacity: 0.9;
-    }
-  }
+  min-height: 84.7vh;
+  padding: 20px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
+
+
+.buttonsWrapper {
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+}
+
+.title {
+  color: #ffffff;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  color: #ffffff;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+
 
 /* Sign Message
 -------------------------------------------------- */
@@ -234,31 +275,170 @@ html {
   }
 }
 
+
+.wrapper2 {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+    background-size: cover;
+    height: 78vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.contentWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 94%;
+}
+
+.imageWrapper {
+    background: url('../img/gold.jpg');
+    background-size: cover;
+    height: 537px;
+    width: 60%;
+    margin-right: 12%;
+}
+
+.textWrapper {
+    padding: 20px;
+    width: 45%;
+}
+
+.title {
+    font-size: 3em;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 1em;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+
+.imageDescription {
+    font-size: 1em;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.sliderContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.buttonsWrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.button {
+    background-color: #fd7e14;
+    color: #ffffff;
+    border: none;
+    padding: 15px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.7em;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    border-radius: 50px;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: #000;
+    color: #fd7e14;
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    margin-top: 10px;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #fd7e14;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #fd7e14;
+    cursor: pointer;
+}
+
+.slider::-ms-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #fd7e14;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .contentWrapper {
+        flex-direction: column;
+    }
+
+    .imageWrapper {
+        width: 100%;
+        height: 300px;
+        margin-right: 0;
+    }
+
+    .textWrapper {
+        width: 100%;
+        text-align: center;
+    }
+}
+
 /* Footer
 -------------------------------------------------- */
-footer {
-  div {
-    margin-top: 0.5rem;
-    font-size: 0.75rem;
-    display: inline-block;
-    font-weight: 400;
-    line-height: 1.155rem;
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
 
-    a {
-      color: $black;
-
-      &:hover {
-        color: $black;
-      }
-
-      #heart {
-        height: 16px;
-        width: 16px;
-
-        path {
-          fill: #c00;
-        }
-      }
-    }
-  }
+.footerContent {
+  text-align: center;
 }

@@ -10,7 +10,6 @@ import { dAppName } from 'config';
 import { logout } from 'helpers';
 import { useGetIsLoggedIn } from 'hooks';
 import { routeNames } from 'routes';
-import { ReactComponent as MultiversXLogo } from '../../../assets/img/multiversx.svg';
 
 export const Navbar = () => {
   const isLoggedIn = useGetIsLoggedIn();
@@ -26,16 +25,15 @@ export const Navbar = () => {
           className='d-flex align-items-center navbar-brand mr-0'
           to={isLoggedIn ? routeNames.dashboard : routeNames.home}
         >
-          <MultiversXLogo className='multiversx-logo' />
-          <span className='dapp-name text-muted'>{dAppName}</span>
+          <div className='multiversx-logo' />
         </Link>
 
         <Nav className='ml-auto'>
           {isLoggedIn && (
             <>
               <NavItem>
-                <button className='btn btn-link' onClick={handleLogout}>
-                  Close
+                <button className='joinButton' onClick={handleLogout}>
+                  Logout
                 </button>
               </NavItem>
             </>
