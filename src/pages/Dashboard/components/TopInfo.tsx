@@ -48,7 +48,6 @@ export const TopInfo = () => {
       gasLimit: gasLimit
     };
 
-
     await refreshAccount();
 
     const { sessionId /*, error*/ } = await sendTransactions({
