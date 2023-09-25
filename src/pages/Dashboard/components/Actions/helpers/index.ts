@@ -1,3 +1,3 @@
 export * from './useGetPingAmount';
 export * from './useGetTimeToPong';
-export * from './getTotalSupply';
+export * from './useGetTotalSupply';

@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
-import { FormatAmount } from 'components';
-import { contractAddress } from 'config';
-import { useGetAccountInfo } from 'hooks';
+import React, { useEffect, useState } from 'react';
+import { contractAddressNFT, gasLimit, priceFor1NFT, tokenNonce } from 'config';
+import { useGetTotalSupply } from './Actions/helpers';
+import { refreshAccount, sendTransactions } from '../../../helpers';
 
 export const TopInfo = () => {
-  const { address, account } = useGetAccountInfo();
   const [sliderValue, setSliderValue] = useState(5);
+  const getTotalSupply = useGetTotalSupply();
+  const [remainingTokens, setRemainingTokens] = useState(0);
+  const /*transactionSessionId*/ [, setTransactionSessionId] = useState<
+    string | null
+  >(null);
 
   const decreaseSliderValue = () => {
     setSliderValue((prevValue) => Math.max(prevValue - 1, 1));
@@ -15,8 +19,51 @@ export const TopInfo = () => {
     setSliderValue((prevValue) => Math.min(prevValue + 1, 10));
   };
 
+  const setTokensStatus = async () => {
+    const tokensStatus = await getTotalSupply();
+
+    setRemainingTokens(750 - Number(tokensStatus));
+  }
+
+  useEffect(() => {
+    setTokensStatus();
+  }, []);
+
   const mintedWidth = `${sliderValue * 10}%`;
   const remainingWidth = `${100 - sliderValue * 10}%`;
+
+  const mintNFT = async () => {
+
+    let mintAmount = sliderValue.toString(16);
+    let transactionValue = priceFor1NFT * sliderValue;
+
+    const dataForMint = 'mint' +
+      '@0' + mintAmount +
+      '@01';
+
+    const mintNFTTransaction2 = {
+      value: transactionValue,
+      data: dataForMint,
+      receiver: contractAddressNFT,
+      gasLimit: gasLimit
+    };
+
+
+    await refreshAccount();
+
+    const { sessionId /*, error*/ } = await sendTransactions({
+      transactions: mintNFTTransaction2,
+      transactionsDisplayInfo: {
+        processingMessage: 'Processing Ping transaction',
+        errorMessage: 'An error has occured during Ping',
+        successMessage: 'Ping transaction successful'
+      },
+      redirectAfterSign: false
+    });
+    if (sessionId != null) {
+      setTransactionSessionId(sessionId);
+    }
+  };
 
   return (
       <div className='wrapper2'>
@@ -38,10 +85,10 @@ export const TopInfo = () => {
                 <button onClick={increaseSliderValue} className="incrementButton">+</button>
               </div>
               <br></br>
-            <div className='total-supply'>Tokens Left: </div>
+            <div className='total-supply'>Tokens Left: {remainingTokens}</div>
             </div>
             <div className='buttonsWrapper'>
-              <button type='button' className='mintButton'>
+              <button type='button' className='mintButton' onClick={mintNFT}>
                 Mint
               </button>
             </div>

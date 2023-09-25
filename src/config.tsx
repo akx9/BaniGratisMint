@@ -3,7 +3,7 @@ export const contractAddress =
 
 export const contractAddressNFT =
   'erd1qqqqqqqqqqqqqpgqwl2svynpygscek8y5x32ewj49kg4pkay9njqjvwn33';
-export const price = 1;
+export const priceFor1NFT = 1000000000000000000;
 export const tokenNonce = '01';
 export const amountToBuy = 1;
 

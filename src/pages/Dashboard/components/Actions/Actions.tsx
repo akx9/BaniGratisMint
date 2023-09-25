@@ -4,7 +4,7 @@ import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import moment from 'moment';
-import { amountToBuy, contractAddress, contractAddressNFT, gasLimit, price, tokenNonce } from "config";
+import { amountToBuy, contractAddress, contractAddressNFT, gasLimit, priceFor1NFT, tokenNonce } from "config";
 import { refreshAccount, sendTransactions } from 'helpers';
 import { useGetPendingTransactions } from 'hooks';
 import {
@@ -101,7 +101,7 @@ export const Actions = () => {
   const mintNFT = async () => {
 
     const nonceBigNumber = new BigNumber(tokenNonce, 16);
-    const payment = new BigNumber(price, 18);
+    const payment = new BigNumber(priceFor1NFT, 18);
     const callerAddress = new Address(address);
 
     const mintNFTTransaction = smartContractNFT.call({
