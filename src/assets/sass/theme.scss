@@ -48,16 +48,16 @@ html {
   text-align: center;
   overflow-y: auto;
   max-height: 80vh;
-  border: 5px solid #f77f00;
+  border: 1px solid #f77f00;
   color: #fff;
 }
 
 .homePanel {
-  background-color: #282828;
+  background-color: #000000;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 83vh;
+  min-height: 85vh;
 }
 
 .wrapper {
@@ -275,7 +275,7 @@ html {
   align-items: flex-start; /* Aligns the top of the text with the top of the image */
   margin: 0 auto;
   max-width: 1200px; /* Adjust as needed */
-  padding: 50px 20px; /* Some padding for smaller screens */
+  padding: 69px 20px; /* Some padding for smaller screens */
   background-color: #000000;
 }
 
@@ -284,7 +284,7 @@ html {
   padding-right: 20px;
   background: url('../img/gold.jpg') no-repeat center center;
   background-size: cover;
-  height: 660px; /* Adjust based on your image's aspect ratio */
+  height: 728px; /* Adjust based on your image's aspect ratio */
   border-radius: 30px; /* Optional: for rounded corners */
   margin-right: 3%;
 }
@@ -364,7 +364,7 @@ html {
   align-items: center;
   background-color: #000000;
   color: #FFFFFF;
-  padding: 21px 0;
+  padding: 30px 0;
   font-size: 0.9rem;
   border-bottom: none !important;
 }
@@ -384,7 +384,8 @@ html {
   margin-right: auto;
 }
 
-.mint-label {
+.mint-label,
+.total-supply {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;

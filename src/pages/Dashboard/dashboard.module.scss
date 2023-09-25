@@ -10,10 +10,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 83vh;
+  min-height: 85vh;
   max-height: 100vh;
   overflow: hidden; // Ensure no scrolling occurs at the container level
-  background-color: #282828; // or any color you prefer
+  background-color: #000000; // or any color you prefer
 }
 
 .contentWrapper {
@@ -24,7 +24,7 @@
   text-align: center;
   overflow-y: auto; // Allow scrolling within the contentWrapper if content is too much
   max-height: 80vh; // Set a maximum height to ensure it fits within the viewport
-  border: 5px solid #fd7e14
+  border: 1px solid #fd7e14
 }
 
 .title {

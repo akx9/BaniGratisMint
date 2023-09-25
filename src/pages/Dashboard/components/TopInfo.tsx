@@ -29,15 +29,16 @@ export const TopInfo = () => {
               This is the only collection that can be purchased directly. Minting a "Gold" NFT, gets you free lifetime access to our Discord group. Holding a "Gold" NFT represents not only an investment but also a direct contribution to the treasury of BaniDAO, thus enabling the core idea of the project. The "Gold" NFTs play an essential role in obtaining the Diamond Pass, granting you access to the DAO Council and providing voting rights and a share of the treasury.
             </p>
             <div className='mint-progress'>
-              <div className='mint-label'>Minting Progress</div>
-              <div className='progress-bar'>
-                <div className='minted' style={{ width: mintedWidth }}>{sliderValue}</div>
-                <div className='remaining' style={{ width: remainingWidth }}></div>
-              </div>
+            <div className='mint-label'>{sliderValue}</div>
+            <div className='progress-bar'>
+              <div className='minted' style={{ width: mintedWidth }}></div>
+            </div>
               <div style={{ display: "flex", alignItems: "center", gap: "15px", marginTop: "10px" }}>
                 <button onClick={decreaseSliderValue} className="incrementButton">-</button>
                 <button onClick={increaseSliderValue} className="incrementButton">+</button>
               </div>
+              <br></br>
+            <div className='total-supply'>Tokens Left: </div>
             </div>
             <div className='buttonsWrapper'>
               <button type='button' className='mintButton'>
