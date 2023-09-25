@@ -1,3 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+
 .transactions {
   font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 83vh;
+  max-height: 100vh;
+  overflow: hidden; // Ensure no scrolling occurs at the container level
+  background-color: #282828; // or any color you prefer
+}
+
+.contentWrapper {
+  background: #000000; // or any color you prefer
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow-y: auto; // Allow scrolling within the contentWrapper if content is too much
+  max-height: 80vh; // Set a maximum height to ensure it fits within the viewport
+  border: 5px solid #fd7e14
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #ffffff; // or any color you prefer
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #ffffff; // or any color you prefer
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+// Style each button
+.buttons > button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff; // or any color you prefer
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #0056b3; // or any color you prefer
+  }
+}
+
+
+/* Responsive Queries */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .contentWrapper {
+    max-width: 100%; /* Allows the contentWrapper to be full width on small screens */
+    padding: 20px; /* Reduced padding for smaller screens */
+  }
+
+  .title {
+    font-size: 2rem; /* Reduced font size for smaller screens */
+  }
+
+  .subtitle {
+    font-size: 1.2rem; /* Reduced font size for smaller screens */
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px; /* Reduced gap for smaller screens */
+  }
+
+  .buttons > button {
+    padding: 8px 16px; /* Reduced padding for smaller screens */
+  }
 }

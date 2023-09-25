@@ -1,12 +1,6 @@
 import React from 'react';
-import {
-  faChartSimple,
-  faFileSignature
-} from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Navbar as BsNavbar, NavItem, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { dAppName } from 'config';
 import { logout } from 'helpers';
 import { useGetIsLoggedIn } from 'hooks';
 import { routeNames } from 'routes';
@@ -17,6 +11,8 @@ export const Navbar = () => {
   const handleLogout = () => {
     logout(`${window.location.origin}/unlock`);
   };
+
+  const discordLink = "discord.gg/Uw3gQunWGv"; // Replace with your Discord invite link
 
   return (
     <BsNavbar className='bg-white border-bottom px-4 py-3'>
@@ -29,15 +25,17 @@ export const Navbar = () => {
         </Link>
 
         <Nav className='ml-auto'>
-          {isLoggedIn && (
-            <>
-              <NavItem>
-                <button className='joinButton' onClick={handleLogout}>
-                  Logout
-                </button>
-              </NavItem>
-            </>
-          )}
+          <NavItem>
+            {isLoggedIn ? (
+              <button className='joinButton' onClick={handleLogout}>
+                Logout
+              </button>
+            ) : (
+              <a href={discordLink} className='joinButton' target='_blank' rel='noopener noreferrer'>
+                Join Discord
+              </a>
+            )}
+          </NavItem>
         </Nav>
       </div>
     </BsNavbar>
