@@ -41,7 +41,7 @@ export const TopInfo = () => {
       '@0' + mintAmount +
       '@01';
 
-    const mintNFTTransaction2 = {
+    const mintNFTTransaction = {
       value: transactionValue,
       data: dataForMint,
       receiver: contractAddressNFT,
@@ -51,11 +51,11 @@ export const TopInfo = () => {
     await refreshAccount();
 
     const { sessionId /*, error*/ } = await sendTransactions({
-      transactions: mintNFTTransaction2,
+      transactions: mintNFTTransaction,
       transactionsDisplayInfo: {
-        processingMessage: 'Processing Ping transaction',
-        errorMessage: 'An error has occured during Ping',
-        successMessage: 'Ping transaction successful'
+        processingMessage: 'Processing Mint transaction',
+        errorMessage: 'An error has occurred during Mint',
+        successMessage: 'Mint transaction successful'
       },
       redirectAfterSign: false
     });

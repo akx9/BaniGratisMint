@@ -1,9 +1,9 @@
 export const SCTransactionData = {
   confirmationMessage: 'transaction successful',
-  succesMessage: 'Ping transaction successful',
+  succesMessage: 'Mint transaction successful',
   modalConfirmation: 'transactionToastTitle',
-  ping: 'Ping',
-  pong: 'Pong',
+  ping: 'Mint',
+  pong: 'Mint',
   transactions: '/transactions'
 };
 export const scSelectors = {
