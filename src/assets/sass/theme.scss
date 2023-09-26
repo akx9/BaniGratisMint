@@ -282,8 +282,6 @@ html {
 .imageWrapper {
   flex: 2;
   padding-right: 20px;
-  background: url('../img/gold.jpg') no-repeat center center;
-  background-size: cover;
   height: 728px; /* Adjust based on your image's aspect ratio */
   border-radius: 30px; /* Optional: for rounded corners */
   margin-right: 3%;
@@ -336,23 +334,6 @@ html {
 .mintButton {
   display: block;
   margin: 20px auto 0;
-}
-
-@media screen and (max-width: 768px) {
-    .contentWrapper {
-        flex-direction: column;
-    }
-
-    .imageWrapper {
-        width: 100%;
-        height: 300px;
-        margin-right: 0;
-    }
-
-    .textWrapper {
-        width: 100%;
-        text-align: center;
-    }
 }
 
 /* Footer
@@ -514,59 +495,45 @@ html {
 /* For tablets and smaller screens */
 @media screen and (max-width: 768px) {
   .contentWrapper {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .imageWrapper {
-      width: 100%;
-      height: 300px;
-      margin-right: 0;
+    width: 100%;
+    height: 300px; /* Adjust based on your image's aspect ratio */
+    margin-bottom: 20px; /* Added some margin for spacing between the image and the text */
+    margin-right: 0; /* Reset the margin-right */
   }
 
   .textWrapper {
-      width: 100%;
-      text-align: center;
-      padding: 20px; /* Added padding for better spacing on smaller screens */
+    width: 100%;
+    text-align: center;
+    padding: 20px; /* Added padding for better spacing on smaller screens */
   }
 
   .title, .subtitle, .imageDescription {
-      padding: 0 20px; /* Added horizontal padding for better text alignment */
+    padding: 0 20px; /* Added horizontal padding for better text alignment */
   }
 
   .mint-progress {
-      width: 90%; /* Reduce width to fit smaller screens */
+    width: 90%; /* Reduce width to fit smaller screens */
   }
 
   .progress-bar {
-      width: 100%; /* Make progress bar take full width */
+    width: 100%; /* Make progress bar take full width */
   }
 
   .mint-label, .minted {
-      font-size: 20px; /* Reduce font size for better fit */
+    font-size: 20px; /* Reduce font size for better fit */
   }
 
   .buttonsWrapper {
-      flex-direction: column; /* Stack buttons vertically */
-      gap: 10px; /* Space between buttons */
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px; /* Space between buttons */
   }
 
   .incrementButton, .mintButton {
-      width: 100%; /* Make buttons take full width */
-  }
-}
-
-/* For mobile screens */
-@media screen and (max-width: 480px) {
-  .title {
-      font-size: 2em; /* Reduce title size for mobile screens */
-  }
-
-  .subtitle, .imageDescription {
-      font-size: 0.9em; /* Reduce text size for better readability */
-  }
-
-  .mint-label, .minted {
-      font-size: 18px; /* Further reduce font size for mobile screens */
+    width: 100%; /* Make buttons take full width */
   }
 }
 
@@ -576,10 +543,3 @@ html {
   border-color: #f77f00 !important;
 }
 
-@media screen and (max-width: 768px) {
-  .imageWrapper {
-    width: 100%;
-    height: 300px;
-    margin-right: 0;
-  }
-}

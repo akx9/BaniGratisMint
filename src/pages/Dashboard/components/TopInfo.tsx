@@ -1,7 +1,16 @@
+<<<<<<< Updated upstream
 import React, { useState } from 'react';
 import { FormatAmount } from 'components';
 import { contractAddress } from 'config';
 import { useGetAccountInfo } from 'hooks';
+=======
+import React, { useEffect, useState } from 'react';
+import { contractAddressNFT, gasLimit, priceFor1NFT, tokenNonce } from 'config';
+import { useGetTotalSupply } from './Actions/helpers';
+import { refreshAccount, sendTransactions } from '../../../helpers';
+import goldImage from '../../../assets/img/gold.jpg';
+
+>>>>>>> Stashed changes
 
 export const TopInfo = () => {
   const { address, account } = useGetAccountInfo();
@@ -21,7 +30,7 @@ export const TopInfo = () => {
   return (
       <div className='wrapper2'>
         <div className='contentWrapper'>
-          <div className='imageWrapper' />
+          <img src={goldImage} className='imageWrapper' alt='Gold' />
           <div className='textWrapper'>
             <h1 className='title'>Gold Pass</h1>
             <h2 className='subtitle'>The Gateway to Unique Benefits and Features</h2>
