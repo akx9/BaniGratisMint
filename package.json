@@ -1,8 +1,8 @@
 {
-  "name": "@multiversx/template-dapp",
-  "description": "MultiversX Dapp Template",
-  "version": "1.0.0",
-  "author": "MultiversX",
+  "name": "@multiversx/banigratis",
+  "description": "BaniGratisMint Room",
+  "version": "1.1.0",
+  "author": "Dan:Mitrea & AlexJS",
   "license": "GPL-3.0-or-later",
   "repository": "@multiversx/mx-template-dapp",
   "dependencies": {

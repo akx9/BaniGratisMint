@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { contractAddressNFT, gasLimit, priceFor1NFT, tokenNonce } from 'config';
-import { useGetTotalSupply } from './Actions/helpers';
+import { useGetTotalSupply } from './helpers';
 import { refreshAccount, sendTransactions } from '../../../helpers';
 import goldImage from '../../../assets/img/gold.jpg';
 
 export const TopInfo = () => {
-  const [sliderValue, setSliderValue] = useState(5);
+  const [sliderValue, setSliderValue] = useState(1);
   const getTotalSupply = useGetTotalSupply();
   const [remainingTokens, setRemainingTokens] = useState(0);
   const /*transactionSessionId*/ [, setTransactionSessionId] = useState<
