@@ -66,16 +66,18 @@ export const TopInfo = () => {
   };
 
   return (
-      <div className="section">
-        <div className='wrapper2'>
-          <div className='contentWrapper'>
-            <img src={goldImage} className='imageWrapper' alt='Gold' />
-            <div className='textWrapper'>
-              <h1 className='title'>Gold Pass</h1>
-              <h2 className='subtitle'>The Gateway to Unique Benefits and Features</h2>
-              <p className='imageDescription'>
-                This is the only collection that can be purchased directly. Minting a "Gold" NFT, gets you free lifetime access to our Discord group. Holding a "Gold" NFT represents not only an investment but also a direct contribution to the treasury of BaniDAO, thus enabling the core idea of the project. The "Gold" NFTs play an essential role in obtaining the Diamond Pass, granting you access to the DAO Council and providing voting rights and a share of the treasury.
-              </p>
+    <div className="section">
+    <div className='wrapper2'>
+      <div className='contentWrapper'>
+        <div className='imageWrapper'>
+          <img src={goldImage} alt='Gold' style={{ width: '100%', borderRadius: '30px' }} />
+        </div>
+        <div className='textWrapper'>
+          <h1 className='title'>Gold Pass</h1>
+          <h2 className='subtitle'>The Gateway to Unique Benefits and Features</h2>
+          <p className='imageDescription'>
+            This is the only collection that can be purchased directly. Minting a "Gold" NFT, gets you free lifetime access to our Discord group. Holding a "Gold" NFT represents not only an investment but also a direct contribution to the treasury of BaniDAO, thus enabling the core idea of the project. The "Gold" NFTs play an essential role in obtaining the Diamond Pass, granting you access to the DAO Council and providing voting rights and a share of the treasury.
+          </p>
             <div className='mint-progress'>
               <div className='mint-label'>{sliderValue}</div>
               <div className='progress-bar'>

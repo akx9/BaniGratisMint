@@ -265,29 +265,27 @@ html {
 .contentWrapper {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center; /* Align items to the center */
   margin: 0 auto;
-  width: 95%; /* Increased width */
-  padding: 1vh; /* Reduced padding */
+  width: 60%; /* Adjust the width as per your design preference */
+  padding: 1vh;
   background-color: #000000;
 }
 
-
 .imageWrapper {
-  flex: 2;
+  flex: 1; /* Adjust the flex value as per your design preference */
   padding-right: 20px;
-  height: 728px; /* Adjust based on your image's aspect ratio */
-  border-radius: 30px; /* Optional: for rounded corners */
+  height: auto; /* Let the height be auto */
+  border-radius: 30px;
   margin-right: 3%;
 }
 
 .textWrapper {
-  font-family: 'Chakra Petch', sans-serif;
-  flex: 1.5; /* Giving more space to text */
+  flex: 1; /* Adjust the flex value as per your design preference */
   padding-left: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center; /* Center the text content vertically */
 }
 
 .title {
@@ -333,19 +331,23 @@ html {
 /* Footer
 -------------------------------------------------- */
 .footer {
-  border-top: 1px solid #ff5c01 !important;
+  border-top: 2px solid #ff5c01; /* Removed !important and adjusted border thickness */
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #000000;
   color: #FFFFFF;
-  padding: 30px 0;
-  font-size: 0.9rem;
-  border-bottom: none !important;
+  padding: 20px 0; /* Adjusted padding */
+  font-size: 1rem; /* Adjusted font size */
+  position: relative; /* Added position relative */
+  bottom: 0; /* Positioned at the bottom */
+  width: 100%; /* Ensured it takes full width */
 }
 
 .footerContent {
   text-align: center;
+  max-width: 80%; /* Ensured the content doesn’t stretch too much on wide screens */
+  margin: 0 auto; /* Centered the content */
 }
 
 /* Slider */
@@ -494,6 +496,7 @@ html {
     align-items: center;
     text-align: center;
     padding: 1vh;
+    width: 90%; /* Adjust the width for smaller screens */
   }
 
   .imageWrapper,
@@ -548,7 +551,7 @@ html {
   padding: 1vh; /* Reduced padding */
   box-sizing: border-box;
   overflow: hidden;
-  min-height: 60vh; /* Increased min-height */
+  min-height: 82vh; /* Increased min-height */
   height: auto;
   display: flex;
   flex-direction: column;
