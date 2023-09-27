@@ -8,7 +8,7 @@ export const TopInfo = () => {
   const [sliderValue, setSliderValue] = useState(5);
   const getTotalSupply = useGetTotalSupply();
   const [remainingTokens, setRemainingTokens] = useState(0);
-  const /*transactionSessionId*/ [, setTransactionSessionId] = useState<
+  const /*transactionSessionId*/[, setTransactionSessionId] = useState<
     string | null
   >(null);
 
@@ -66,20 +66,21 @@ export const TopInfo = () => {
   };
 
   return (
-      <div className='wrapper2'>
-        <div className='contentWrapper'>
-          <img src={goldImage} className='imageWrapper' alt='Gold' />
-          <div className='textWrapper'>
-            <h1 className='title'>Gold Pass</h1>
-            <h2 className='subtitle'>The Gateway to Unique Benefits and Features</h2>
-            <p className='imageDescription'>
-              This is the only collection that can be purchased directly. Minting a "Gold" NFT, gets you free lifetime access to our Discord group. Holding a "Gold" NFT represents not only an investment but also a direct contribution to the treasury of BaniDAO, thus enabling the core idea of the project. The "Gold" NFTs play an essential role in obtaining the Diamond Pass, granting you access to the DAO Council and providing voting rights and a share of the treasury.
-            </p>
+      <div className="section">
+        <div className='wrapper2'>
+          <div className='contentWrapper'>
+            <img src={goldImage} className='imageWrapper' alt='Gold' />
+            <div className='textWrapper'>
+              <h1 className='title'>Gold Pass</h1>
+              <h2 className='subtitle'>The Gateway to Unique Benefits and Features</h2>
+              <p className='imageDescription'>
+                This is the only collection that can be purchased directly. Minting a "Gold" NFT, gets you free lifetime access to our Discord group. Holding a "Gold" NFT represents not only an investment but also a direct contribution to the treasury of BaniDAO, thus enabling the core idea of the project. The "Gold" NFTs play an essential role in obtaining the Diamond Pass, granting you access to the DAO Council and providing voting rights and a share of the treasury.
+              </p>
             <div className='mint-progress'>
-            <div className='mint-label'>{sliderValue}</div>
-            <div className='progress-bar'>
-              <div className='minted' style={{ width: mintedWidth }}></div>
-            </div>
+              <div className='mint-label'>{sliderValue}</div>
+              <div className='progress-bar'>
+                <div className='minted' style={{ width: mintedWidth }}></div>
+              </div>
               <div style={{ display: "flex", alignItems: "center", gap: "15px", marginTop: "10px" }}>
                 <button onClick={decreaseSliderValue} className="incrementButton">-</button>
                 <button onClick={increaseSliderValue} className="incrementButton">+</button>
@@ -95,6 +96,6 @@ export const TopInfo = () => {
           </div>
         </div>
       </div>
-
+    </div>
   );
 };
