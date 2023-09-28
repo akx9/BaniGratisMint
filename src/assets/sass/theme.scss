@@ -261,31 +261,27 @@ html {
   min-height: 100vh;
   max-height: 100vh;
 }
-
 .contentWrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Align items to the center */
+  align-items: flex-start;
   margin: 0 auto;
-  width: 60%; /* Adjust the width as per your design preference */
-  padding: 1vh;
+  width: 67vw; /* Reduced width */
+  padding: 1vh; /* Maintained padding */
   background-color: #000000;
 }
 
 .imageWrapper {
-  flex: 1; /* Adjust the flex value as per your design preference */
-  padding-right: 20px;
-  height: auto; /* Let the height be auto */
-  border-radius: 30px;
-  margin-right: 3%;
+  flex: 2;
+  padding-right: 1vw; /* Reduced padding */
+  height: auto; /* Maintained to keep aspect ratio */
+  border-radius: 1vw; /* Reduced border-radius */
+  margin-right: 2%; /* Reduced margin */
 }
 
 .textWrapper {
-  flex: 1; /* Adjust the flex value as per your design preference */
-  padding-left: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center the text content vertically */
+  flex: 1.5;
+  padding-left: 1vw; /* Reduced padding */
 }
 
 .title {
@@ -495,27 +491,24 @@ html {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 1vh;
-    width: 90%; /* Adjust the width for smaller screens */
+    padding: 1vh; /* Maintained padding */
   }
 
   .imageWrapper,
   .textWrapper {
-    width: 100%;
+    width: 90vw; /* Maintained width */
   }
 
   .imageWrapper {
-    height: auto; /* Adjust height to maintain aspect ratio */
-    margin-bottom: 20px;
+    margin-bottom: 1vh; /* Reduced margin */
   }
 
   .textWrapper {
-    text-align: center;
-    padding: 20px;
+    padding: 1vh 1vw; /* Reduced padding */
   }
 
   .mint-progress {
-    width: 90%;
+    width: 80vw; /* Reduced width */
   }
 
   .progress-bar {
@@ -548,16 +541,17 @@ html {
   width: 100%;
   max-width: 100vw;
   margin: 0 auto;
-  padding: 1vh; /* Reduced padding */
+  padding: 2vh; /* Adjusted to viewport height */
   box-sizing: border-box;
   overflow: hidden;
-  min-height: 82vh; /* Increased min-height */
+  min-height: 82vh; /* Adjusted to viewport height */
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 
 /* Responsive styling */
 @media screen and (max-width: 1200px) {
