@@ -30,11 +30,16 @@ Override Bootstrap variables only above.
 
 /* Base
 -------------------------------------------------- */
-html {
-  min-height: 100%;
+html, body {
+  min-height: 100vh;
   font-size: 14px;
   margin: 0;
   padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
 }
 
 .flex-column {
@@ -271,19 +276,11 @@ html {
 
 /* Dashboard */
 
-.wrapper {
-  position: relative;
-  background-color: #000000;
-  min-height: 100vh;
-  max-height: 100vh;
-}
-
 .contentWrapper {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   margin: 0 auto;
-  width: 67vw;
   padding: 1vh;
   background-color: #000000;
 }
@@ -344,17 +341,17 @@ html {
 /* Footer
 -------------------------------------------------- */
 .footer {
+  flex-shrink: 0;
+  width: 100%;
+  position: relative;
   border-top: 1px solid #ff5c01;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000000;
+  background-color: $body;
   color: #FFFFFF;
   padding: 20px 0;
   font-size: 1rem;
-  position: relative;
-  bottom: 0;
-  width: 100%;
 }
 
 .footerContent {
@@ -504,51 +501,6 @@ html {
 }
 
 
-@media screen and (max-width: 768px) {
-  .contentWrapper {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1vh;
-  }
-
-  .imageWrapper,
-  .textWrapper {
-    width: 90vw;
-  }
-
-  .imageWrapper {
-    margin-bottom: 1vh;
-  }
-
-  .textWrapper {
-    padding: 1vh 1vw;
-  }
-
-  .mint-progress {
-    width: 80vw;
-  }
-
-  .progress-bar {
-    width: 100%;
-  }
-
-  .mint-label,
-  .minted {
-    font-size: 20px;
-  }
-
-  .buttonsWrapper {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .incrementButton,
-  .mintButton {
-    width: 100%;
-  }
-}
-
 .dapp-core-component__main__btn-primary {
   color: #fff;
   background-color: #f77f00 !important;
@@ -562,131 +514,55 @@ html {
   padding: 2vh;
   box-sizing: border-box;
   overflow: hidden;
-  min-height: 82vh;
-  height: auto;
+  min-height: calc(100vh - 50px - 100px);
+  flex-grow: 1; /* This will make the .section expand to take up remaining space, pushing the footer down */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-
-/* Responsive styling */
-@media screen and (max-width: 1200px) {
-  .section {
-    padding: 20px 10px;
-    min-height: 300px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .section {
-    padding: 20px 5px;
-    min-height: 200px;
-  }
-}
-
-@media (min-width: 1921px) and (max-width: 2560px) {
-  .contentWrapper {
-    width: 50vw; 
-  }
-}
-
-@media (min-width: 2561px) and (max-width: 2800px) {
-  .contentWrapper {
-    width: 55vw; 
-  }
-}
-
-// 12" MacBook: 2304x1440
-@media (min-width: 2305px) and (max-width: 2560px) {
-  .contentWrapper {
-    width: 70vw; 
-  }
-
-  .title {
-    font-size: 3.5em; 
-  }
-
-  .subtitle,
-  .mint-label {
-    font-size: 2.5em; 
-  }
-
-  .imageDescription {
-    font-size: 1.5em; 
-  }
-}
-
-// 13" MacBook Air: 2560x1600
-// 13" MacBook Pro: 2560x1600
-@media (min-width: 2561px) and (max-width: 2880px) {
-  .contentWrapper {
-    width: 65vw; 
-  }
-
-  .title {
-    font-size: 4em; 
-  }
-
-  .subtitle,
-  .mint-label {
-    font-size: 3em; 
-  }
-
-  .imageDescription {
-    font-size: 1.7em; 
-  }
-}
-
-
-// 15" MacBook Pro: 2880x1800
-@media (min-width: 2881px) and (max-width: 3072px) {
-  .contentWrapper {
-    width: 60vw; // 
-  }
-}
-
-.title {
-  font-size: 4.5em; 
-}
-
-.subtitle,
-.mint-label {
-  font-size: 3.5em; 
-}
-
-.imageDescription {
-  font-size: 2em; 
-}
-
-
-// 16" MacBook Pro: 3072x1920
-@media (min-width: 3073px) {
-  .contentWrapper {
-    width: 55vw; // 
-  }
-  .title {
-    font-size: 5em; 
-  }
-  .subtitle,
-  .mint-label {
-    font-size: 4em; 
-  }
-  .imageDescription {
-    font-size: 2.2em; 
-  }
-}
-// Exact Match for 1920x1080 Resolution
-@media screen and (device-width: 1920px) and (device-height: 1080px) and (-webkit-min-device-pixel-ratio: 1) {
+// For screens larger than 1920px
+@media (min-width: 1921px) {
   .contentWrapper {
     width: 67vw;
   }
   
-  .title {
-    font-size: 3em; 
+  .title,
+  .subtitle,
+  .mint-label {
+    font-size: calc(2em + 0.5vw); // Scales the font size based on the viewport width
   }
   
+  .imageDescription {
+    font-size: calc(1.2em + 0.2vw); // Scales the font size based on the viewport width
+  }
+}
+
+// For screens between 1201px and 1920px
+@media (min-width: 1201px) and (max-width: 1920px) {
+  .contentWrapper {
+    width: 72vw;
+  }
+  
+  .title,
+  .subtitle,
+  .mint-label {
+    font-size: calc(2em + 0.2vw); // Scales the font size based on the viewport width
+  }
+  
+  .imageDescription {
+    font-size: calc(1.2em + 0.1vw); // Scales the font size based on the viewport width
+  }
+}
+
+// For screens between 769px and 1200px
+@media (min-width: 769px) and (max-width: 1200px) {
+  .contentWrapper {
+    width: 80vw;
+  }
+  
+  .title,
   .subtitle,
   .mint-label {
     font-size: 2em; 
@@ -694,5 +570,22 @@ html {
   
   .imageDescription {
     font-size: 1.2em; 
+  }
+}
+
+// For screens up to 768px
+@media (max-width: 768px) {
+  .contentWrapper {
+    width: 90vw;
+  }
+  
+  .title,
+  .subtitle,
+  .mint-label {
+    font-size: 1.5em;
+  }
+  
+  .imageDescription {
+    font-size: 1em;
   }
 }

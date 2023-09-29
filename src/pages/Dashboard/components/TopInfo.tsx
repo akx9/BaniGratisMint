@@ -67,7 +67,6 @@ export const TopInfo = () => {
 
   return (
     <div className="section">
-      <div className='wrapper2'>
         <div className='contentWrapper'>
           <div className='imageWrapper'>
             <img src={goldImage} alt='Gold' style={{ width: '100%', borderRadius: '30px' }} />
@@ -99,6 +98,5 @@ export const TopInfo = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
