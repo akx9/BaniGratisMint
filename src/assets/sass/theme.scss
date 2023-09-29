@@ -540,25 +540,24 @@ body {
   }
 }
 
-
 @media (min-width: 1201px) and (max-width: 1920px) {
   .contentWrapper {
-    width: 75vw;
+    width: 70vw; /* Increased the width to give more space to the text and other elements */
   }
   
   .title {
-    font-size: calc(2.5em + 0.4vw);
+    font-size: calc(2em + 0.3vw); /* Reduced the font size */
     font-weight: 700;
   }
   
   .subtitle,
   .mint-label {
-    font-size: calc(1.8em + 0.2vw);
+    font-size: calc(1.5em + 0.1vw); /* Reduced the font size */
     font-weight: 600;
   }
   
   .imageDescription {
-    font-size: calc(1.3em + 0.1vw);
+    font-size: calc(1.1em + 0.1vw); /* Reduced the font size */
     font-weight: 400;
   }
 }
