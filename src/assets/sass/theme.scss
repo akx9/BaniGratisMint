@@ -326,7 +326,7 @@ html {
 /* Footer
 -------------------------------------------------- */
 .footer {
-  border-top: 2px solid #ff5c01; /* Removed !important and adjusted border thickness */
+  border-top: 1px solid #ff5c01; /* Removed !important and adjusted border thickness */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -556,19 +556,53 @@ html {
 @media screen and (max-width: 1200px) {
   .section {
     padding: 20px 10px;
-    min-height: 300px; /* Adjust as needed */
+    min-height: 300px; 
   }
 }
 
 @media screen and (max-width: 768px) {
   .section {
     padding: 20px 5px;
-    min-height: 200px; /* Adjust as needed */
+    min-height: 200px; 
   }
 }
 
 @media (min-width: 1921px) and (max-width: 2560px) {
   .contentWrapper {
     width: 50vw; // Adjust the width of the contentWrapper for 2560x1080 resolution
+  }
+}
+
+@media (min-width: 2561px) and (max-width: 2800px) {
+  .contentWrapper {
+    width: 45vw; // Adjust the width of the contentWrapper for 2800x1800 resolution
+  }
+}
+
+// 12" MacBook: 2304x1440
+@media (min-width: 2304px) and (max-width: 2560px) {
+  .contentWrapper {
+    width: 50vw; // Adjust as needed
+  }
+}
+
+// 13" MacBook Air & 13" MacBook Pro: 2560x1600
+@media (min-width: 2561px) and (max-width: 2880px) {
+  .contentWrapper {
+    width: 45vw; // Adjust as needed
+  }
+}
+
+// 15" MacBook Pro: 2880x1800
+@media (min-width: 2881px) and (max-width: 3072px) {
+  .contentWrapper {
+    width: 40vw; // Adjust as needed
+  }
+}
+
+// 16" MacBook Pro: 3072x1920
+@media (min-width: 3073px) {
+  .contentWrapper {
+    width: 35vw; // Adjust as needed
   }
 }
