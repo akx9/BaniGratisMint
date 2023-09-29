@@ -27,6 +27,7 @@ Override Bootstrap variables only above.
 .btn-primary {
   background-color: #f77f00;
 }
+
 /* Base
 -------------------------------------------------- */
 html {
@@ -36,11 +37,11 @@ html {
   padding: 0;
 }
 
-.flex-column{
+.flex-column {
   background-color: #000000;
 }
 
-.cardBody{
+.cardBody {
   background: #000000;
   padding: 30px;
   border-radius: 10px;
@@ -84,7 +85,7 @@ html {
 
 /* Navbar
 -------------------------------------------------- */
-.bg-white{
+.bg-white {
   background-color: #000 !important;
 
 }
@@ -94,7 +95,7 @@ html {
   background-size: contain;
   background-position: center;
   width: 80px;
-  height: 50px; 
+  height: 50px;
   background-image: url('../img/logo.png');
 }
 
@@ -106,7 +107,8 @@ html {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
-  border: none; /* You may need to add this to override browser default styles for button */
+  border: none;
+  /* You may need to add this to override browser default styles for button */
 }
 
 
@@ -153,12 +155,15 @@ html {
       @include media-breakpoint-down(xl) {
         max-width: none;
       }
+
       @include media-breakpoint-down(lg) {
         max-width: 26rem;
       }
+
       @include media-breakpoint-down(md) {
         max-width: 12rem;
       }
+
       @include media-breakpoint-down(sm) {
         max-width: 8rem;
       }
@@ -198,6 +203,7 @@ html {
     width: 64px;
     height: 64px;
   }
+
   .lds-ellipsis div {
     position: absolute;
     top: 27px;
@@ -207,45 +213,56 @@ html {
     background: rgba(0, 0, 0, 0.1);
     animation-timing-function: cubic-bezier(0, 1, 1, 0);
   }
+
   .bg-blue .lds-ellipsis div {
     background: rgba(255, 255, 255, 0.4);
   }
+
   .lds-ellipsis div:nth-child(1) {
     left: 6px;
     animation: lds-ellipsis1 0.6s infinite;
   }
+
   .lds-ellipsis div:nth-child(2) {
     left: 6px;
     animation: lds-ellipsis2 0.6s infinite;
   }
+
   .lds-ellipsis div:nth-child(3) {
     left: 26px;
     animation: lds-ellipsis2 0.6s infinite;
   }
+
   .lds-ellipsis div:nth-child(4) {
     left: 45px;
     animation: lds-ellipsis3 0.6s infinite;
   }
+
   @keyframes lds-ellipsis1 {
     0% {
       transform: scale(0);
     }
+
     100% {
       transform: scale(1);
     }
   }
+
   @keyframes lds-ellipsis3 {
     0% {
       transform: scale(1);
     }
+
     100% {
       transform: scale(0);
     }
   }
+
   @keyframes lds-ellipsis2 {
     0% {
       transform: translate(0, 0);
     }
+
     100% {
       transform: translate(19px, 0);
     }
@@ -254,38 +271,39 @@ html {
 
 /* Dashboard */
 
-
 .wrapper {
   position: relative;
   background-color: #000000;
   min-height: 100vh;
   max-height: 100vh;
 }
+
 .contentWrapper {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   margin: 0 auto;
-  width: 67vw; // Keep as is for 1920x1080 resolution
+  width: 67vw;
   padding: 1vh;
   background-color: #000000;
 }
+
 .imageWrapper {
   flex: 2;
-  padding-right: 1vw; /* Reduced padding */
-  height: auto; /* Maintained to keep aspect ratio */
-  border-radius: 1vw; /* Reduced border-radius */
-  margin-right: 2%; /* Reduced margin */
+  padding-right: 1vw;
+  height: auto;
+  border-radius: 1vw;
+  margin-right: 2%;
 }
 
 .textWrapper {
   flex: 1.5;
-  padding-left: 1vw; /* Reduced padding */
+  padding-left: 1vw;
 }
 
 .title {
   font-family: 'Chakra Petch', sans-serif;
-  font-size: 3em; /* Adjust for desired size */
+  font-size: 3em;
   font-weight: bold;
   color: #ffffff;
   margin-bottom: 20px;
@@ -293,7 +311,7 @@ html {
 
 .subtitle {
   font-family: 'Chakra Petch', sans-serif;
-  font-size: 2em; /* Adjust for desired size */
+  font-size: 2em;
   font-weight: semi-bold;
   color: #ffffff;
   margin-bottom: 20px;
@@ -301,15 +319,15 @@ html {
 
 .imageDescription {
   font-family: 'Chakra Petch', sans-serif;
-  font-size: 1.2em; /* Adjust for desired size */
+  font-size: 1.2em;
   color: #ffffff;
   margin-bottom: 20px;
-  line-height: 1.5; /* For better readability */
+  line-height: 1.5;
 }
 
 .mint-label {
   font-family: 'Chakra Petch', sans-serif;
-  font-size: 1.5em; /* Adjust for desired size */
+  font-size: 1.5em;
   color: #ffffff;
   margin-bottom: 20px;
 }
@@ -326,23 +344,23 @@ html {
 /* Footer
 -------------------------------------------------- */
 .footer {
-  border-top: 1px solid #ff5c01; /* Removed !important and adjusted border thickness */
+  border-top: 1px solid #ff5c01;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #000000;
   color: #FFFFFF;
-  padding: 20px 0; /* Adjusted padding */
-  font-size: 1rem; /* Adjusted font size */
-  position: relative; /* Added position relative */
-  bottom: 0; /* Positioned at the bottom */
-  width: 100%; /* Ensured it takes full width */
+  padding: 20px 0;
+  font-size: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
 .footerContent {
   text-align: center;
-  max-width: 80%; /* Ensured the content doesn’t stretch too much on wide screens */
-  margin: 0 auto; /* Centered the content */
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 /* Slider */
@@ -395,16 +413,17 @@ html {
 /* Styles for +/- buttons */
 
 .buttonsWrapper {
-  display: flex;          /* Convert the container to a flex container */
-  justify-content: center; /* Center the button horizontally */
-  width: 100%;            /* Ensure the container takes the full width */
-  padding-top: 15px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 8px;
 }
+
 .mintButton {
-  padding: 1em 4em; /* Increased padding for larger button */
-  font-size: 1.5em; /* Increased font-size for larger text */
-  min-width: 200px; /* Optional: Set a minimum width for the button */
-  display: inline-block; /* To respect the min-width */
+  padding: 1em 4em;
+  font-size: 1.5em;
+  min-width: 200px;
+  display: inline-block;
   border: none;
   outline: none;
   color: rgb(255, 255, 255);
@@ -420,7 +439,7 @@ html {
 
 .mintButton:before {
   content: "";
-  background: linear-gradient(45deg, #f77f00, #ff1e56, #fc3737,#ffa63f, #f39c12);
+  background: linear-gradient(45deg, #f77f00, #ff1e56, #fc3737, #ffa63f, #f39c12);
   position: absolute;
   top: -4px;
   left: -4px;
@@ -448,16 +467,18 @@ html {
 }
 
 .mintButton:hover {
-  background-color: #e56b0d; /* A slightly darker shade for hover */
+  background-color: #e56b0d;
 }
 
 @keyframes glowing-mintButton {
   0% {
     background-position: 0 0;
   }
+
   50% {
     background-position: 400% 0;
   }
+
   100% {
     background-position: 0 0;
   }
@@ -483,31 +504,29 @@ html {
 }
 
 
-
-
 @media screen and (max-width: 768px) {
   .contentWrapper {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 1vh; /* Maintained padding */
+    padding: 1vh;
   }
 
   .imageWrapper,
   .textWrapper {
-    width: 90vw; /* Maintained width */
+    width: 90vw;
   }
 
   .imageWrapper {
-    margin-bottom: 1vh; /* Reduced margin */
+    margin-bottom: 1vh;
   }
 
   .textWrapper {
-    padding: 1vh 1vw; /* Reduced padding */
+    padding: 1vh 1vw;
   }
 
   .mint-progress {
-    width: 80vw; /* Reduced width */
+    width: 80vw;
   }
 
   .progress-bar {
@@ -530,7 +549,7 @@ html {
   }
 }
 
-.dapp-core-component__main__btn-primary{
+.dapp-core-component__main__btn-primary {
   color: #fff;
   background-color: #f77f00 !important;
   border-color: #f77f00 !important;
@@ -540,10 +559,10 @@ html {
   width: 100%;
   max-width: 100vw;
   margin: 0 auto;
-  padding: 2vh; /* Adjusted to viewport height */
+  padding: 2vh;
   box-sizing: border-box;
   overflow: hidden;
-  min-height: 82vh; /* Adjusted to viewport height */
+  min-height: 82vh;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -556,53 +575,124 @@ html {
 @media screen and (max-width: 1200px) {
   .section {
     padding: 20px 10px;
-    min-height: 300px; 
+    min-height: 300px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .section {
     padding: 20px 5px;
-    min-height: 200px; 
+    min-height: 200px;
   }
 }
 
 @media (min-width: 1921px) and (max-width: 2560px) {
   .contentWrapper {
-    width: 50vw; // Adjust the width of the contentWrapper for 2560x1080 resolution
+    width: 50vw; 
   }
 }
 
 @media (min-width: 2561px) and (max-width: 2800px) {
   .contentWrapper {
-    width: 45vw; // Adjust the width of the contentWrapper for 2800x1800 resolution
+    width: 55vw; 
   }
 }
 
 // 12" MacBook: 2304x1440
-@media (min-width: 2304px) and (max-width: 2560px) {
+@media (min-width: 2305px) and (max-width: 2560px) {
   .contentWrapper {
-    width: 50vw; // Adjust as needed
+    width: 70vw; 
+  }
+
+  .title {
+    font-size: 3.5em; 
+  }
+
+  .subtitle,
+  .mint-label {
+    font-size: 2.5em; 
+  }
+
+  .imageDescription {
+    font-size: 1.5em; 
   }
 }
 
-// 13" MacBook Air & 13" MacBook Pro: 2560x1600
+// 13" MacBook Air: 2560x1600
+// 13" MacBook Pro: 2560x1600
 @media (min-width: 2561px) and (max-width: 2880px) {
   .contentWrapper {
-    width: 45vw; // Adjust as needed
+    width: 65vw; 
+  }
+
+  .title {
+    font-size: 4em; 
+  }
+
+  .subtitle,
+  .mint-label {
+    font-size: 3em; 
+  }
+
+  .imageDescription {
+    font-size: 1.7em; 
   }
 }
+
 
 // 15" MacBook Pro: 2880x1800
 @media (min-width: 2881px) and (max-width: 3072px) {
   .contentWrapper {
-    width: 40vw; // Adjust as needed
+    width: 60vw; // 
   }
 }
+
+.title {
+  font-size: 4.5em; 
+}
+
+.subtitle,
+.mint-label {
+  font-size: 3.5em; 
+}
+
+.imageDescription {
+  font-size: 2em; 
+}
+
 
 // 16" MacBook Pro: 3072x1920
 @media (min-width: 3073px) {
   .contentWrapper {
-    width: 35vw; // Adjust as needed
+    width: 55vw; // 
+  }
+  .title {
+    font-size: 5em; 
+  }
+  .subtitle,
+  .mint-label {
+    font-size: 4em; 
+  }
+  .imageDescription {
+    font-size: 2.2em; 
+  }
+}
+// Exact Match for 1920x1080 Resolution
+@media screen and (device-width: 1920px) and (device-height: 1080px) and (-webkit-min-device-pixel-ratio: 1) {
+  .contentWrapper {
+    width: 67vw;
+  }
+  
+  .title {
+    font-size: 3em; 
+  }
+  
+  .subtitle,
+  .mint-label {
+    font-size: 2em; 
+  }
+  
+  .imageDescription {
+    font-size: 1.2em; 
   }
 }
