@@ -535,7 +535,7 @@ body {
   }
   
   .imageDescription {
-    font-size: calc(1.2em + 0.2vw); // Scales the font size based on the viewport width
+    font-size: calc(1.7em + 0.2vw); // Scales the font size based on the viewport width
   }
 }
 
@@ -577,15 +577,24 @@ body {
 @media (max-width: 768px) {
   .contentWrapper {
     width: 90vw;
+    flex-direction: column; // Stack children vertically
   }
   
-  .title,
+  .imageWrapper, .textWrapper {
+    flex: 1; // Make both the image and text take equal width
+    padding: 0; // Resetting padding to avoid any unwanted space
+    margin-bottom: 20px; // Give some space between the image and the text
+  }
+  
+  .title{
+    font-size: 2.5em;
+  }
   .subtitle,
   .mint-label {
-    font-size: 1.5em;
+    font-size: 2em;
   }
   
   .imageDescription {
-    font-size: 1em;
+    font-size: 1.8em;
   }
 }
