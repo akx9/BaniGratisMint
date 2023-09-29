@@ -300,7 +300,6 @@ body {
 
 .title {
   font-family: 'Chakra Petch', sans-serif;
-  font-size: 3em;
   font-weight: bold;
   color: #ffffff;
   margin-bottom: 20px;
@@ -308,7 +307,6 @@ body {
 
 .subtitle {
   font-family: 'Chakra Petch', sans-serif;
-  font-size: 2em;
   font-weight: semi-bold;
   color: #ffffff;
   margin-bottom: 20px;
@@ -316,7 +314,6 @@ body {
 
 .imageDescription {
   font-family: 'Chakra Petch', sans-serif;
-  font-size: 1.2em;
   color: #ffffff;
   margin-bottom: 20px;
   line-height: 1.5;
@@ -324,7 +321,6 @@ body {
 
 .mint-label {
   font-family: 'Chakra Petch', sans-serif;
-  font-size: 1.5em;
   color: #ffffff;
   margin-bottom: 20px;
 }
@@ -380,7 +376,7 @@ body {
 }
 
 .progress-bar {
-  width: 400px;
+  width: 350px;
   height: 20px;
   background-color: #dcdcdc;
   border-radius: 10px;
@@ -529,7 +525,7 @@ body {
   }
   
   .title {
-    font-size: calc(1.5em + 0.5vw);
+    font-size: calc(2em + 0.5vw);
   }
   
   .subtitle,
@@ -550,6 +546,7 @@ body {
   
   .title {
     font-size: calc(1.5em + 0.2vw);
+    padding-top: 5px;
   }
   
   .subtitle,
@@ -581,11 +578,11 @@ body {
     font-size: 1em;
   }
 }
-
 // For screens up to 768px
 @media (max-width: 768px) {
   .contentWrapper {
-    width: 90vw;
+    width: 100%; // Use 100% width
+    padding: 0 10px; // Add padding to avoid content touching the screen edges
     flex-direction: column;
   }
   
@@ -596,15 +593,39 @@ body {
   }
   
   .title {
-    font-size: 2em;
+    font-size: 1.5em;
   }
   
   .subtitle,
   .mint-label {
-    font-size: 1.7em;
+    font-size: 1.2em;
   }
   
   .imageDescription {
-    font-size: 1.5em;
+    font-size: 1em;
+  }
+  .progress-bar{
+    width: 330px;
   }
 }
+
+// For screens up to 414px
+@media (max-width: 414px) {
+  .contentWrapper {
+    padding: 0 5px; // Reduced padding for very small screens
+  }
+  
+  .title {
+    font-size: 1.3em; // Further reduced font size
+  }
+  
+  .subtitle,
+  .mint-label {
+    font-size: 1em; // Further reduced font size
+  }
+  
+  .imageDescription {
+    font-size: 0.9em; // Further reduced font size
+  }
+}
+
