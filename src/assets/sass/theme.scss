@@ -266,11 +266,10 @@ html {
   justify-content: space-between;
   align-items: flex-start;
   margin: 0 auto;
-  width: 67vw; /* Reduced width */
-  padding: 1vh; /* Maintained padding */
+  width: 67vw; // Keep as is for 1920x1080 resolution
+  padding: 1vh;
   background-color: #000000;
 }
-
 .imageWrapper {
   flex: 2;
   padding-right: 1vw; /* Reduced padding */
@@ -565,5 +564,11 @@ html {
   .section {
     padding: 20px 5px;
     min-height: 200px; /* Adjust as needed */
+  }
+}
+
+@media (min-width: 1921px) and (max-width: 2560px) {
+  .contentWrapper {
+    width: 50vw; // Adjust the width of the contentWrapper for 2560x1080 resolution
   }
 }
