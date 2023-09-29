@@ -525,17 +525,20 @@ body {
 // For screens larger than 1920px
 @media (min-width: 1921px) {
   .contentWrapper {
-    width: 67vw;
+    width: 61vw;
   }
   
-  .title,
+  .title {
+    font-size: calc(1.5em + 0.5vw);
+  }
+  
   .subtitle,
   .mint-label {
-    font-size: calc(2em + 0.5vw); // Scales the font size based on the viewport width
+    font-size: calc(1.2em + 0.4vw);
   }
   
   .imageDescription {
-    font-size: calc(1.7em + 0.2vw); // Scales the font size based on the viewport width
+    font-size: calc(1em + 0.3vw);
   }
 }
 
@@ -545,14 +548,17 @@ body {
     width: 72vw;
   }
   
-  .title,
+  .title {
+    font-size: calc(1.5em + 0.2vw);
+  }
+  
   .subtitle,
   .mint-label {
-    font-size: calc(2em + 0.2vw); // Scales the font size based on the viewport width
+    font-size: calc(1.2em + 0.1vw);
   }
   
   .imageDescription {
-    font-size: calc(1.2em + 0.1vw); // Scales the font size based on the viewport width
+    font-size: calc(1em + 0.1vw);
   }
 }
 
@@ -562,14 +568,17 @@ body {
     width: 80vw;
   }
   
-  .title,
+  .title {
+    font-size: 1.5em;
+  }
+  
   .subtitle,
   .mint-label {
-    font-size: 2em; 
+    font-size: 1.2em;
   }
   
   .imageDescription {
-    font-size: 1.2em; 
+    font-size: 1em;
   }
 }
 
@@ -577,24 +586,25 @@ body {
 @media (max-width: 768px) {
   .contentWrapper {
     width: 90vw;
-    flex-direction: column; // Stack children vertically
+    flex-direction: column;
   }
   
   .imageWrapper, .textWrapper {
-    flex: 1; // Make both the image and text take equal width
-    padding: 0; // Resetting padding to avoid any unwanted space
-    margin-bottom: 20px; // Give some space between the image and the text
+    flex: 1;
+    padding: 0;
+    margin-bottom: 10px;
   }
   
-  .title{
-    font-size: 2.5em;
-  }
-  .subtitle,
-  .mint-label {
+  .title {
     font-size: 2em;
   }
   
+  .subtitle,
+  .mint-label {
+    font-size: 1.7em;
+  }
+  
   .imageDescription {
-    font-size: 1.8em;
+    font-size: 1.5em;
   }
 }
