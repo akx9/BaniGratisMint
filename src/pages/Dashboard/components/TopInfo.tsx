@@ -11,6 +11,8 @@ export const TopInfo = () => {
   const /*transactionSessionId*/[, setTransactionSessionId] = useState<
     string | null
   >(null);
+  const MINUTE_MS = 12000;
+
 
   const decreaseSliderValue = () => {
     setSliderValue((prevValue) => Math.max(prevValue - 1, 1));
@@ -25,6 +27,15 @@ export const TopInfo = () => {
 
     setRemainingTokens(750 - Number(tokensStatus));
   }
+
+  //call the set token status method every minute, such that tokens left - refresh
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTokensStatus();
+    }, MINUTE_MS);
+
+    return () => clearInterval(interval); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
+  }, [])
 
   useEffect(() => {
     setTokensStatus();
@@ -58,10 +69,11 @@ export const TopInfo = () => {
         errorMessage: 'An error has occurred during Mint',
         successMessage: 'Mint transaction successful'
       },
-      redirectAfterSign: false
+      redirectAfterSign: false,
     });
     if (sessionId != null) {
       setTransactionSessionId(sessionId);
+      await setTokensStatus();
     }
   };
 

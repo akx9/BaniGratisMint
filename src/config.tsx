@@ -21,4 +21,4 @@ export const TOOLS_API_URL = 'https://tools.multiversx.com';
  * Calls to these domains will use `nativeAuth` Baerer token
  */
 export const sampleAuthenticatedDomains = [TOOLS_API_URL];
-export const gasLimit = 60000000;
+export const gasLimit = 6000000;
