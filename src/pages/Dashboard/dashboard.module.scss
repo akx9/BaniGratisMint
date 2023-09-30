@@ -9,34 +9,34 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 82.9vh;
+  min-height: 85vh;
   max-height: 100vh;
-  overflow: hidden; // Ensure no scrolling occurs at the container level
-  background-color: #000000; // or any color you prefer
+  overflow: hidden; 
+  background-color: #000000;
 }
 
 .contentWrapper {
-  background: #000000; // or any color you prefer
+  background: #000000; 
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
   text-align: center;
-  overflow-y: auto; // Allow scrolling within the contentWrapper if content is too much
-  max-height: 80vh; // Set a maximum height to ensure it fits within the viewport
+  overflow-y: auto; 
+  max-height: 80vh; 
   border: 1px solid #fd7e14
 }
 
 .title {
   font-size: 2.5rem;
   margin-bottom: 10px;
-  color: #ffffff; // or any color you prefer
+  color: #ffffff;
   font-family: 'Chakra Petch', sans-serif;
 }
 
 .subtitle {
   font-size: 1.5rem;
   margin-bottom: 20px;
-  color: #ffffff; // or any color you prefer
+  color: #ffffff; 
   font-family: 'Chakra Petch', sans-serif;
 }
 
@@ -51,13 +51,13 @@
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  background-color: #007bff; // or any color you prefer
+  background-color: #007bff; 
   color: #ffffff;
   cursor: pointer;
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: #0056b3; // or any color you prefer
+    background-color: #0056b3; 
   }
 }
 
@@ -69,24 +69,24 @@
   }
 
   .contentWrapper {
-    max-width: 100%; /* Allows the contentWrapper to be full width on small screens */
-    padding: 20px; /* Reduced padding for smaller screens */
+    max-width: 100%; 
+    padding: 20px; 
   }
 
   .title {
-    font-size: 2rem; /* Reduced font size for smaller screens */
+    font-size: 2rem; 
   }
 
   .subtitle {
-    font-size: 1.2rem; /* Reduced font size for smaller screens */
+    font-size: 1.2rem; 
   }
 
   .buttons {
     flex-direction: column;
-    gap: 10px; /* Reduced gap for smaller screens */
+    gap: 10px; 
   }
 
   .buttons > button {
-    padding: 8px 16px; /* Reduced padding for smaller screens */
+    padding: 8px 16px; 
   }
 }
