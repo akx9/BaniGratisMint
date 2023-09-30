@@ -5,12 +5,11 @@
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 85vh;
+  min-height: 81.1vh;
   max-height: 100vh;
   overflow: hidden; // Ensure no scrolling occurs at the container level
   background-color: #000000; // or any color you prefer
