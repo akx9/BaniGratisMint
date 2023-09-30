@@ -12,7 +12,7 @@ export const Navbar = () => {
     logout(`${window.location.origin}/unlock`);
   };
 
-  const discordLink = "discord.gg/Uw3gQunWGv"; // Replace with your Discord invite link
+  const discordLink = "https://discord.gg/Uw3gQunWGv"; // Replace with your Discord invite link
 
   return (
     <BsNavbar className='bg-white border-bottom px-4 py-3'>
