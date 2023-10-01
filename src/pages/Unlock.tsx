@@ -24,9 +24,9 @@ const UnlockPage = () => {
         <div className={style.buttons}>
           <ExtensionLoginButton loginButtonText='MultiversX DeFi Wallet' {...commonProps} />
           <OperaWalletLoginButton loginButtonText='Opera Crypto Wallet - Beta' {...commonProps} />
-          <WebWalletLoginButton loginButtonText='MultiversX Web Wallet' data-testid='webWalletLoginBtn' {...commonProps} />
-          <LedgerLoginButton loginButtonText='Ledger' {...commonProps} />
-          <WalletConnectLoginButton loginButtonText='xPortal App' {...commonProps} />
+          {/*<WebWalletLoginButton loginButtonText='MultiversX Web Wallet' data-testid='webWalletLoginBtn' {...commonProps} />*/}
+          {/*<LedgerLoginButton loginButtonText='Ledger' {...commonProps} />*/}
+          <WalletConnectLoginButton loginButtonText='xPortal Mobile App' {...commonProps} />
         </div>
       </div>
     </div>

@@ -7,6 +7,7 @@ import goldImage from '../../../assets/img/gold.jpg';
 export const TopInfo = () => {
   const [sliderValue, setSliderValue] = useState(1);
   const getTotalSupply = useGetTotalSupply();
+  const [disableMintButton, setDisableMintButton] = useState(false);
   const [remainingTokens, setRemainingTokens] = useState(0);
   const /*transactionSessionId*/[, setTransactionSessionId] = useState<
     string | null
@@ -26,6 +27,10 @@ export const TopInfo = () => {
     const tokensStatus = await getTotalSupply();
 
     setRemainingTokens(750 - Number(tokensStatus));
+
+    if(Number(tokensStatus) == 427) {
+      setDisableMintButton(true);
+    }
   }
 
   //call the set token status method every minute, such that tokens left - refresh
@@ -103,7 +108,7 @@ export const TopInfo = () => {
               <div className='total-supply'>Tokens Left: {remainingTokens}</div>
             </div>
             <div className='buttonsWrapper'>
-              <button type='button' className='mintButton' onClick={mintNFT}>
+              <button type='button' className='mintButton' onClick={mintNFT} disabled={disableMintButton}>
                 Mint
               </button>
             </div>
