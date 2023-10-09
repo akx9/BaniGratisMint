@@ -2,7 +2,7 @@ export const contractAddressNFTOld =
   'erd1qqqqqqqqqqqqqpgqwl2svynpygscek8y5x32ewj49kg4pkay9njqjvwn33';
 
 export const contractAddressNFT =
-  'erd1qqqqqqqqqqqqqpgq9qrkaj0rll95uechugeu8u2sczegw07w9njqs5e9v5';
+  'erd1qqqqqqqqqqqqqpgqkyy2tl4ysnacjumx8rw598um7m6h7x6qwkyqh9rv04';
 export const priceFor1NFT = 1000000000000000000;
 export const price = 1;
 

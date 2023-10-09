@@ -1,22 +1,22 @@
 {
     "buildInfo": {
         "rustc": {
-            "version": "1.70.0-nightly",
-            "commitHash": "44f5180584404d18058cbbf224c55255db4fdcbb",
-            "commitDate": "2023-03-20",
+            "version": "1.71.0-nightly",
+            "commitHash": "a2b1646c597329d0a25efa3889b66650f65de1de",
+            "commitDate": "2023-05-25",
             "channel": "Nightly",
-            "short": "rustc 1.70.0-nightly (44f518058 2023-03-20)"
+            "short": "rustc 1.71.0-nightly (a2b1646c5 2023-05-25)"
         },
         "contractCrate": {
             "name": "elven-tools-sft-minter",
-            "version": "0.1.0"
+            "version": "0.4.0"
         },
         "framework": {
             "name": "multiversx-sc",
-            "version": "0.39.8"
+            "version": "0.43.3"
         }
     },
-    "name": "ElvenToolsSftMinter",
+    "name": "BaniGratisGoldSFT",
     "constructor": {
         "inputs": [],
         "outputs": []
@@ -39,6 +39,40 @@
             "outputs": [
                 {
                     "type": "bytes"
+                }
+            ]
+        },
+        {
+            "name": "isPaused",
+            "mutability": "readonly",
+            "inputs": [
+                {
+                    "name": "token_nonce",
+                    "type": "u64"
+                }
+            ],
+            "outputs": [
+                {
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "getAmountPerAddressTotal",
+            "mutability": "readonly",
+            "inputs": [
+                {
+                    "name": "token_nonce",
+                    "type": "u64"
+                },
+                {
+                    "name": "address",
+                    "type": "Address"
+                }
+            ],
+            "outputs": [
+                {
+                    "type": "BigUint"
                 }
             ]
         },
@@ -114,36 +148,7 @@
             "outputs": []
         },
         {
-            "name": "mintCommunity",
-            "onlyOwner": true,
-            "mutability": "mutable",
-            "inputs": [
-                {
-                    "name": "token_id",
-                    "type": "u64"
-                }
-            ],
-            "outputs": []
-        },
-        {
-            "name": "giveaway",
-            "onlyOwner": true,
-            "mutability": "mutable",
-            "inputs": [
-                {
-                    "name": "token_id",
-                    "type": "u64"
-                },
-                {
-                    "name": "addresses_encoded",
-                    "type": "variadic<Address>",
-                    "multi_arg": true
-                }
-            ],
-            "outputs": []
-        },
-        {
-            "name": "mint",
+            "name": "buy",
             "mutability": "mutable",
             "payableInTokens": [
                 "EGLD"
@@ -154,7 +159,19 @@
                     "type": "u32"
                 },
                 {
-                    "name": "token_id",
+                    "name": "token_nonce",
+                    "type": "u64"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "mintCommunity",
+            "onlyOwner": true,
+            "mutability": "mutable",
+            "inputs": [
+                {
+                    "name": "token_nonce",
                     "type": "u64"
                 }
             ],
@@ -168,11 +185,51 @@
             "outputs": []
         },
         {
+            "name": "setNewAmountLimitPerAddress",
+            "onlyOwner": true,
+            "mutability": "mutable",
+            "inputs": [
+                {
+                    "name": "token_nonce",
+                    "type": "u64"
+                },
+                {
+                    "name": "limit",
+                    "type": "BigUint"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "pauseSelling",
+            "onlyOwner": true,
+            "mutability": "mutable",
+            "inputs": [
+                {
+                    "name": "token_nonce",
+                    "type": "u64"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "startSelling",
+            "onlyOwner": true,
+            "mutability": "mutable",
+            "inputs": [
+                {
+                    "name": "token_nonce",
+                    "type": "u64"
+                }
+            ],
+            "outputs": []
+        },
+        {
             "name": "getPrice",
             "mutability": "readonly",
             "inputs": [
                 {
-                    "name": "token_id",
+                    "name": "token_nonce",
                     "type": "u64"
                 }
             ],
@@ -187,7 +244,7 @@
             "mutability": "readonly",
             "inputs": [
                 {
-                    "name": "token_id",
+                    "name": "token_nonce",
                     "type": "u64"
                 }
             ],
@@ -202,7 +259,7 @@
             "mutability": "readonly",
             "inputs": [
                 {
-                    "name": "token_id",
+                    "name": "token_nonce",
                     "type": "u64"
                 }
             ],

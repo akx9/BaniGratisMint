@@ -54,7 +54,7 @@ export const TopInfo = () => {
     let mintAmount = sliderValue.toString(16);
     let transactionValue = priceFor1NFT * sliderValue;
 
-    const dataForMint = 'mint' +
+    const dataForMint = 'buy' +
       '@0' + mintAmount +
       '@' + tokenNonce;
 
