@@ -28,7 +28,7 @@ export const TopInfo = () => {
 
     setRemainingTokens(750 - Number(tokensStatus));
 
-    if(Number(tokensStatus) == 427) {
+    if(Number(tokensStatus) == 750) {
       setDisableMintButton(true);
     }
   }
